@@ -11,7 +11,7 @@ protocol NetworkManagerProtocol {
     func fetchNews(completion: @escaping (Result<[News]?, Error>) -> Void)
 }
 
-class NetworkManager: NetworkManagerProtocol {
+final class NetworkManager: NetworkManagerProtocol {
     private let baseURL = "https://newsapi.org/v2/top-headlines"
     private let apiKey = "3937105f648849759b9ba2da70801d45"
     
